@@ -5,8 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="276dp"
+        android:layout_gravity="top"
+        app:srcCompat="@drawable/add_to_cart" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        />
+    <EditText
+    android:id="@+id/txt_username"
+    android:layout_width="210dp"
+    android:layout_height="wrap_content"
+    android:hint="Enter Username"
+    android:gravity="center"
+    />
+    <EditText
+        android:id="@+id/txt_password"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Password"
+        android:gravity="center"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login Now"
+        android:padding="12dp"
+        android:backgroundTint="@color/blue"
+        android:layout_marginTop="20dp"
+        />
 
 </LinearLayout>
