@@ -12,14 +12,26 @@ import android.widget.Toast
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_hello)
+        setContentView(R.layout.activity_main)
 
-        val buttonLoginHome = findViewById<Button>(R.id.btn_login)
+        val buttonLoginNow = findViewById<Button>(R.id.btn_loginNow)
+        var inputEmptyUser = findViewById<EditText>(R.id.txt_username)
+        var inputEmptyPassword = findViewById<EditText>(R.id.txt_password)
 
-        buttonLoginHome.setOnClickListener {
-            val intent = Intent(this, HelloActivity::class.java)
-            startActivity(intent)
+        buttonLoginNow.setOnClickListener {
+            if (inputEmptyUser.text.toString().length == 0) {
+                Toast.makeText(this, "Please enter username", Toast.LENGTH_SHORT).show();
+            } else if (inputEmptyPassword.text.toString().length == 0) {
+                Toast.makeText(this, "Please enter password", Toast.LENGTH_SHORT).show();
+            } else if (inputEmptyPassword.text.toString().length < 8) {
+                Toast.makeText(this, "Please enter valid password", Toast.LENGTH_SHORT).show();
+            } else {
+                val intent = Intent(this, HelloActivity::class.java)
+                startActivity(intent)
+            }
         }
 
     }
+
+
 }

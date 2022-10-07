@@ -20,27 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="90dp"
         android:gravity="center"
-        android:text="Hello!"
+        android:text="Welcome!"
         android:textSize="24dp"
         android:textStyle="bold"
         tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="145dp"
-        android:layout_height="46dp"
-        android:padding="8dp"
-        android:text="Login"
-        android:backgroundTint="@color/blue"
-        android:textStyle="bold" />
-
-    <Button
-        android:layout_width="145dp"
-        android:layout_height="46dp"
-        android:padding="8dp"
-        android:backgroundTint="@color/blue"
-        android:text="Sign Up"
-        android:textStyle="bold" />
-
-
 </LinearLayout>
