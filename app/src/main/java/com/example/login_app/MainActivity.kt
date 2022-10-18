@@ -32,6 +32,10 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
+        alreadyNotRegistered.setOnClickListener {
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
+        }
 
 
 
