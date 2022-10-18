@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 
 
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         val buttonLoginNow = findViewById<Button>(R.id.btn_loginNow)
         var inputEmptyUser = findViewById<EditText>(R.id.txt_username)
         var inputEmptyPassword = findViewById<EditText>(R.id.txt_password)
+        var alreadyNotRegistered = findViewById<TextView>(R.id.txt_NotRegistered)
 
         buttonLoginNow.setOnClickListener {
             if (inputEmptyUser.text.toString().length == 0) {
@@ -30,6 +32,9 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
+
+
+
 
     }
 
